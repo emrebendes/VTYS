@@ -144,39 +144,3 @@ insert into [dbo].[KITAB_KATEGORI] ([KATEGORI_ID],[ISBN]) values
 (1,8)
 
 
-delete from EMANET where EMANET_ID = 1
-
-update UYELER set AD ='şinasi' , SOYAD ='aaaa' where UYE_ID = 2
----------------------------------------------------------------
--- select [sütun isimler] from [tablo isimleri] where [hangi satırlar]
-
-select * from OUR_library.dbo.KUTUBHANE
-
-select [OUR_library].[dbo].[KUTUBHANE].[ad] from OUR_library.dbo.KUTUBHANE
-
-select [AD],[SOYAD] from [OUR_library].[dbo].[UYELER]
-
-select [AD] as 'nam',[SOYAD] from [OUR_library].[dbo].[UYELER]
-
-select * from KUTUBHANE
-select * from ADRESLER
-select * from KUTUBHANE, ADRESLER
-select TEL from UYELER where ad = 'tarkan'
-
-
-select distinct ShipCountry from Orders where Freight >15
-select count(distinct ShipCountry) from Orders where Freight >15
-select count(*) from Orders where Freight >=15 and  Freight <=30
-select count(*) from Orders where Freight between 15 and 30
-select * from orders
-select * from orders where CustomerID in ('VINET','TOMSP','HANAR')
-
-
-select * from customers
-select customerid from Customers where Country = 'germany'
-select count(*) from orders where CustomerID in (select CustomerID from Customers where Country = 'germany') and Freight between 15 and 30
-select * from Customers where ContactName like 'a%'
-
-
-select count(distinct country) from Customers 
-select count(customerID) from Customers where Country = 'GErmany'
